@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<style type="text/css">
+        @font-face {
+            font-family: flappyFont;
+            src: url(assets/flappyFont.TTF);
+        }
+		*{
+			margin,padding: 0px;
+			font-family: 'Tahoma';
+		}
+		#main-container{
+			width: 100%;
+		}
+		.game-box{
+			margin: 0px auto;
+			display: relative;
+			width: 70%;
+		}
+		canvas{
+			background-color:#000;
+			border:2px solid green;
+		}
+        .btn-restart-game{
+            font-family:flappyFont;
+            text-align: center;
+            font-size: 25px;
+        }
+	</style>
+</head>
+<body>
+
+	<div id="main-container">
+		<span class="center-block" style="font-family:flappyFont;font-size: 40px;text-align: center;">Flappy Type</span>
+        <div class="game-box">
+
+			<canvas id="game-canvas" class="center-block" width="800px" height="500px"></canvas>
+		</div>
+	</div>
+    <div>
+        <br>
+        <button type="button" class="btn btn-danger btn-lg center-block btn-restart-game" onclick="AppGame.RestartGame();">RESTART</button>
+    </div>
+    <script type="text/javascript" src="js/game.js"></script>
+
+	<script type="text/javascript">
+		AppGame.StartGame();
+	</script>
+</body>
+</html>
