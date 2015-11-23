@@ -14,7 +14,13 @@
 		}
 		#main-container{
 			width: 100%;
+            background-color: #99D9EA;
+            padding:30px;
 		}
+        #instructions-container{
+            background-color: #D9534F; 
+            padding:20px;
+        }
 		.game-box{
 			margin: 0px auto;
 			display: relative;
@@ -30,6 +36,7 @@
             font-size: 25px;
         }
         .outer {
+            background-color: #99D9EA;
             display: table;
             position: absolute;
             height: 100%;
@@ -53,15 +60,24 @@
 <div class="inner">
 	
     <div id="main-container">
-		<span class="center-block" style="font-family:flappyFont;font-size: 40px;text-align: center;margin-bottom:10px;">Flappy Type</span>
+		<span class="center-block" style="font-family:flappyFont;font-size: 55px;text-align: center;padding-bottom:10px;">Flappy Type</span>
         <div class="game-box">
 
 			<canvas id="game-canvas" class="center-block" width="800px" height="500px"></canvas>
 		</div>
+        <div>
+            <br>
+            <button id="restart-button"type="button" class="btn btn-danger btn-lg center-block btn-restart-game" onclick="startButton();">START</button>
+        </div>
 	</div>
-    <div>
-        <br>
-        <button type="button" class="btn btn-danger btn-lg center-block btn-restart-game" onclick="AppGame.RestartGame();">RESTART</button>
+    <h>
+    <div id="instructions-container"> 
+        <div class="center-block" style="width:70%">
+            <span class="center-block" style="font-family:flappyFont;font-size: 40px;text-align: center;margin-bottom:10px;margin-top:20px">How to Play</span>
+            <p style="font-family:flappyFont;font-size: 25px;text-align: center;margin-bottom:10px;">Ini game buat latihan belajar ngetik. Tekan huruf yang jatuh pada keyboard sebelum sampai ke bawah. Kalau bisa ngelewatin level 14 jago...</p>
+            <br/>
+            <p style="font-family:flappyFont;font-size: 20px;text-align: center;margin-bottom:10px;">-Tito</p>
+        </div>
     </div>
 </div>
 </div>
@@ -69,7 +85,17 @@
     <script type="text/javascript" src="js/game.js"></script>
 
 	<script type="text/javascript">
-		AppGame.StartGame();
+        startButton = function(){
+            if(document.getElementById("restart-button").innerHTML=="START"){
+                document.getElementById("restart-button").innerHTML="RESTART"
+                AppGame.StartGame();
+            }else{
+                AppGame.RestartGame();                    
+            } 
+        }
+		
+
+
 	</script>
 
 </body>
