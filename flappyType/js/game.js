@@ -12,6 +12,7 @@ var AppGame = (function (window, canvas, undefined) {
         letters                 = "AS ",
         level                   = 0,
         char_px                 = 40,
+        life                    = 5,
         score                   = 0,
         letter_delay            = 80, //100
         min_letter_delay        = 0; //20
@@ -50,7 +51,7 @@ var AppGame = (function (window, canvas, undefined) {
 
         // if(score % 10 === 0){
             level++;
-            letter_delay -= letter_delay/10;
+            letter_delay -= letter_delay/5;
             letter_delay = Math.max(letter_delay, min_letter_delay);
             console.log("letter_delay = ", letter_delay);
         // }
@@ -86,6 +87,11 @@ var AppGame = (function (window, canvas, undefined) {
             }
             hitWrongLetterSound.play();
             score -= 5;
+            if(--life < 1){
+                app.Render();
+                __gameOver();
+            }
+
         }
     };
 
@@ -153,7 +159,17 @@ var AppGame = (function (window, canvas, undefined) {
 
             ctx.fillStyle = "black";
             ctx.font = 'bold 33px flappyFont';
-            ctx.fillText("SCORE: "+score, 5, 30);
+            // var s='';
+            // for(var i=0;i<life;i++){
+            //     s+='<3'
+            // }
+
+            var imgHeart = new Image();
+            imgHeart.src = "assets/heart38.png";
+            ctx.fillText("LIVES: ", 5, 30);
+            for(var i=0;i<life;i++){
+                ctx.drawImage(imgHeart,100+i*50,-2);
+            }
             ctx.fillText("LEVEL: "+ level, 5, 60);
             ctx.fillStyle = "#DED895";
             ctx.fillRect(0,405,max_width,112);
