@@ -1,0 +1,3 @@
+[submodule "UASVisdat"]
+	path = UASVisdat
+	url = https://github.com/tirtawr/UASVisdat.git
