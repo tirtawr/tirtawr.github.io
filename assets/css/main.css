@@ -2472,7 +2472,6 @@
 /* Header */
 
 	#header {
-		max-width: 400px;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -2502,7 +2501,7 @@
 		position: fixed;
 		text-align: right;
 		top: 0;
-		width: 35%;
+		width: 30%;
 	}
 
 		#header > * {
