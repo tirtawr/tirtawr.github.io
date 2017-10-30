@@ -1566,7 +1566,7 @@
 		}
 
 	body, input, select, textarea {
-		color: #a2a2a2;
+		color: #787878;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
@@ -1579,7 +1579,8 @@
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #49bf9d;
+		color: #0D6F95;
+		font-weight: bolder;
 		text-decoration: none;
 	}
 
@@ -2077,6 +2078,7 @@
 				max-width: 100%;
 				max-height: 200px;
 				margin: auto;
+				border: 2px solid #0D6F95;
 			}
 
 			.image.fit.double img {
@@ -2242,6 +2244,7 @@
 				}
 
 				ul.labeled-icons li h3 {
+					margin: 0px !important;
 					color: #b2b2b2;
 					left: 0;
 					position: absolute;
@@ -2457,7 +2460,7 @@
 		}
 
 		.work-item h3 {
-			font-size: 1.1em;
+			font-size: 1.2em;
 			font-weight: bold;
 			margin: 0 0 0.5em 0;
 		}
@@ -2547,7 +2550,7 @@
 	}
 
 		#footer .icons a {
-			color: rgba(255, 255, 255, 0.4);
+			color: rgba(255, 255, 255, 0.9);
 		}
 
 	#footer .copyright {
