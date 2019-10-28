@@ -3,4 +3,4 @@
 	url = https://github.com/tirtawr/UASVisdat.git
 [submodule "p5-sketches"]
 	path = p5-sketches
-	url = git@github.com:tirtawr/p5-sketches.git
+	url = https://github.com/tirtawr/p5-sketches.git
